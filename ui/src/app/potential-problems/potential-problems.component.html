@@ -1,0 +1,12 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div class="button-container">
+    <button 
+        *ngIf="!isReportReady"
+        (click)="generateReport()"
+    >
+        Generate Report
+    </button>
+    <div *ngIf="isReportReady">
+        <tabs [fullReport]="data" ></tabs>
+    </div>
+</div>

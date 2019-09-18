@@ -1,0 +1,54 @@
+.card {
+    /* Add shadows to create the "card" effect */
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    padding: 30px 20px;
+    margin-bottom: 20px;
+    border-left: 3px solid red;
+  }
+  .tab {
+    display: inline-block;
+    list-style-type: none;
+    margin-right: 5px;
+  }
+  li {
+    height: 20px;
+    border-right: 1px solid black;
+    padding-right: 8px;
+    padding-top: 15px;
+  }
+  li:last-child {
+      border-right: none;
+  }
+  .tab a {
+    text-decoration: none;
+  }
+  label {
+    font-size: 16px;
+    font-weight: 600;
+  }
+  /* On mouse-over, add a deeper shadow */
+  .card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  }
+  
+  /* Add some padding inside the card container */
+  .container {
+    padding: 2px 16px;
+  }
+  .show-solution{
+    margin-top: 10px;
+    color: #4c8dff;
+    cursor: pointer;
+  }
+  .show-solution:hover{
+    text-decoration: underline; 
+  }
+  .tab-close {
+    color: gray;
+    text-align: right;
+    cursor: pointer;
+  }
+  .active {
+      text-decoration: underline;
+  }

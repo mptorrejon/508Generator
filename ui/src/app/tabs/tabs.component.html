@@ -1,0 +1,35 @@
+<ul class="nav nav-tabs">
+    <li 
+        *ngFor="let tab of tabs; let i = index" 
+        (click)="selectTab(tab, i)" 
+        [class.active]="tab.active"
+        class="tab"
+    >
+        <a href="#">{{tab || 'Home'}}</a>
+    </li>
+</ul>
+<div *ngFor="let site of content">
+    <h1 class="site-name">
+        Report for {{site.site}}
+    </h1>
+    <h3>
+        Status: {{site.status}}
+    </h3>
+    <div *ngFor="let card of site.errors; let i=index" class="container">
+        <div class="card">
+            <div><label>Message: </label>{{card.message}}</div>
+            <div><label>Line#: </label>{{card.line}}</div>
+            <div 
+                (click)="showSolution(card)"
+                class="show-solution"
+            >
+                <span *ngIf="!card.isVisible">Show</span>
+                <span *ngIf="card.isVisible">Hide</span>
+                Solution
+            </div>
+            <div *ngIf="card.isVisible">{{card.solution}}</div>
+        </div>
+    </div>
+</div>
+
+<ng-content></ng-content>
